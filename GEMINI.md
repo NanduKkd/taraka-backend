@@ -17,3 +17,24 @@ This document provides an overview of the project's folder structure.
 *   **`validators/`**: Contains validation schemas for incoming requests.
 
 **Note:** Every update on this project should be updated in this `GEMINI.md` file. Every incomplete code should be marked with `// TODO`.
+
+# Git Rules
+
+## Branching Strategy
+- Use `develop` as the main development branch.
+- Create feature branches from `develop` for new features (e.g., `feature/your-feature-name`).
+- Create bugfix branches from `develop` for bug fixes (e.g., `bugfix/your-bug-name`).
+- Create release branches from `develop` for releases (e.g., `release/v1.0.0`).
+- Create hotfix branches from `main` for critical production bugs (e.g., `hotfix/your-hotfix-name`).
+
+## Commit Messages
+- Start the commit message with a type: `feat:` (new feature), `fix:` (bug fix), `docs:` (documentation changes), `style:` (code style, formatting), `refactor:` (code refactoring), `perf:` (performance improvements), `test:` (adding tests), `chore:` (maintenance tasks, build process, etc.), `temp:` (temporary code edits for testing).
+- Use a clear and concise subject line (first line) that is 50 characters or less.
+- Use the imperative mood in the subject line (e.g., "Add feature" instead of "Added feature").
+- Optionally, provide a more detailed body after a blank line, wrapped at 72 characters.
+- Reference relevant issues or tasks in the commit message body.
+
+## Short Commits
+- Make small, atomic commits that focus on a single logical change.
+- Avoid committing unrelated changes together.
+- This makes it easier to review changes, revert mistakes, and understand the project's history.
