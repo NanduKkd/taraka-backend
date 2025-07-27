@@ -26,6 +26,7 @@ This document provides an overview of the project's folder structure.
 - Create bugfix branches from `develop` for bug fixes (e.g., `bugfix/your-bug-name`).
 - Create release branches from `develop` for releases (e.g., `release/v1.0.0`).
 - Create hotfix branches from `main` for critical production bugs (e.g., `hotfix/your-hotfix-name`).
+- **Do not commit directly to `develop`, `main`, or `release` branches.** All changes should go through feature, bugfix, or hotfix branches and then be merged.
 
 ## Commit Messages
 - Start the commit message with a type: `feat:` (new feature), `fix:` (bug fix), `docs:` (documentation changes), `style:` (code style, formatting), `refactor:` (code refactoring), `perf:` (performance improvements), `test:` (adding tests), `chore:` (maintenance tasks, build process, etc.), `temp:` (temporary code edits for testing).
