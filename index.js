@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const { setup } = require('./config/constants');
 const apiRoutes = require('./routes/api');
+const errorHandler = require('./middlewares/errorHandler');
 
 const app = express();
 
@@ -33,6 +34,9 @@ process.on('SIGINT', () => {
 });
 
 app.use('/api', apiRoutes);
+
+// Error handling middleware
+app.use(errorHandler);
 
 app.listen(setup.PORT, () => {
   console.log(`App listening on port ${setup.PORT}`);
