@@ -39,3 +39,9 @@ This document provides an overview of the project's folder structure.
 - Make small, atomic commits that focus on a single logical change.
 - Avoid committing unrelated changes together.
 - This makes it easier to review changes, revert mistakes, and understand the project's history.
+
+# Error Handling Rules
+- Unwanted `try-catch` blocks should be avoided. They should only be used for handling known and required error cases.
+- The `utils/AppError.js` class should be used for re-throwing errors.
+- Always set the original error as the `cause` when rethrowing an `AppError`.
+- Error responses are handled globally using the Express error handler. Therefore, `res.status().json()` should not be used directly in routes and controllers for error responses.
