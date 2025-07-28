@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const projectController = require('../controllers/project');
 const { createProjectSchema } = require('../validators/project');
-const { validate } = require('../middlewares/validator');
+const validate = require('../middlewares/validator');
 const sessionRoutes = require('./session');
 
 router.post('/', validate(createProjectSchema), projectController.createProject);
