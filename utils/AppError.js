@@ -34,6 +34,16 @@ class AppError extends Error {
       INTERNAL_SERVER_ERROR: 'INTERNAL_SERVER_ERROR',
     };
   }
+
+  static get STATUS_CODES() {
+    return {
+      VALIDATION_ERROR: 400,
+      AUTHENTICATION_ERROR: 401,
+      AUTHORIZATION_ERROR: 403,
+      NOT_FOUND_ERROR: 404,
+      INTERNAL_SERVER_ERROR: 500,
+    };
+  }
 }
 
 module.exports = AppError;
