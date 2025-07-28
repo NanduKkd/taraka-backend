@@ -3,7 +3,9 @@ const userRoutes = require('./user');
 const projectRoutes = require('./project');
 const messageRoutes = require('./message');
 const { authenticate, restrictAnons } = require('../middlewares/auth');
+const responseHelper = require('../middlewares/responseHelper');
 
+router.use(responseHelper);
 router.use(authenticate);
 
 router.use('/user', userRoutes);
