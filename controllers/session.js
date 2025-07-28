@@ -1,17 +1,19 @@
 
+const AppError = require('../utils/AppError');
+
 const createSession = (req, res) => {
   // TODO: Implement createSession
-  res.status(501).send({ message: 'Not Implemented' });
+  throw new AppError('Not Implemented').setCode(AppError.CODES.NOT_IMPLEMENTED);
 };
 
 const getSessions = (req, res) => {
   // TODO: Implement getSessions
-  res.status(501).send({ message: 'Not Implemented' });
+  throw new AppError('Not Implemented').setCode(AppError.CODES.NOT_IMPLEMENTED);
 };
 
 const getSession = (req, res) => {
   // TODO: Implement getSession
-  res.status(501).send({ message: 'Not Implemented' });
+  throw new AppError('Not Implemented').setCode(AppError.CODES.NOT_IMPLEMENTED);
 };
 
 module.exports = {

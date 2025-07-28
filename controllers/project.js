@@ -1,22 +1,24 @@
 
+const AppError = require('../utils/AppError');
+
 const createProject = (req, res) => {
   // TODO: Implement createProject
-  res.status(501).send({ message: 'Not Implemented' });
+  throw new AppError('Not Implemented').setCode(AppError.CODES.NOT_IMPLEMENTED);
 };
 
 const getProjects = (req, res) => {
   // TODO: Implement getProjects
-  res.status(501).send({ message: 'Not Implemented' });
+  throw new AppError('Not Implemented').setCode(AppError.CODES.NOT_IMPLEMENTED);
 };
 
 const getProject = (req, res) => {
   // TODO: Implement getProject
-  res.status(501).send({ message: 'Not Implemented' });
+  throw new AppError('Not Implemented').setCode(AppError.CODES.NOT_IMPLEMENTED);
 };
 
 const updateProject = (req, res) => {
   // TODO: Implement updateProject
-  res.status(501).send({ message: 'Not Implemented' });
+  throw new AppError('Not Implemented').setCode(AppError.CODES.NOT_IMPLEMENTED);
 };
 
 module.exports = {

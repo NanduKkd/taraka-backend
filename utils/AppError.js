@@ -32,6 +32,7 @@ class AppError extends Error {
       AUTHORIZATION_ERROR: 'AUTHORIZATION_ERROR',
       NOT_FOUND_ERROR: 'NOT_FOUND_ERROR',
       INTERNAL_SERVER_ERROR: 'INTERNAL_SERVER_ERROR',
+      NOT_IMPLEMENTED: 'NOT_IMPLEMENTED',
     };
   }
 
@@ -42,6 +43,7 @@ class AppError extends Error {
       AUTHORIZATION_ERROR: 403,
       NOT_FOUND_ERROR: 404,
       INTERNAL_SERVER_ERROR: 500,
+      NOT_IMPLEMENTED: 501,
     };
   }
 }

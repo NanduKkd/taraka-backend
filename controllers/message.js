@@ -1,12 +1,14 @@
 
+const AppError = require('../utils/AppError');
+
 const getMessages = (req, res) => {
   // TODO: Implement getMessages
-  res.status(501).send({ message: 'Not Implemented' });
+  throw new AppError('Not Implemented').setCode(AppError.CODES.NOT_IMPLEMENTED);
 };
 
 const createMessage = (req, res) => {
   // TODO: Implement createMessage
-  res.status(501).send({ message: 'Not Implemented' });
+  throw new AppError('Not Implemented').setCode(AppError.CODES.NOT_IMPLEMENTED);
 };
 
 module.exports = {

@@ -41,7 +41,11 @@ This document provides an overview of the project's folder structure.
 - This makes it easier to review changes, revert mistakes, and understand the project's history.
 
 # Error Handling Rules
-- Unwanted `try-catch` blocks should be avoided. They should only be used for handling known and required error cases.
+- Unwanted `try-catch` blocks should be avoided. They should only be used for handling known and required error cases. Since Express 5 handles errors in async route handlers, `next()` is not required when throwing an `AppError`.
 - The `utils/AppError.js` class should be used for re-throwing errors.
 - Always set the original error as the `cause` when rethrowing an `AppError`.
 - Error responses are handled globally using the Express error handler. Therefore, `res.status().json()` should not be used directly in routes and controllers for error responses.
+
+# Response Handling Rules
+- All API responses should use the `res.helper.success()` or `res.helper.error()` methods provided by the `ResponseHelper` middleware.
+- Avoid direct usage of `res.status().json()` in routes and controllers for API responses.
